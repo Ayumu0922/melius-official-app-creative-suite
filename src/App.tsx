@@ -137,32 +137,32 @@ const COPY = {
     },
     heroes: {
       home: {
-        badge: 'Premium',
-        title: 'Welcome to Orbit Canvas Creative Suite',
-        body: 'A calm command center for design apps, shared files, active projects, learning paths, and community inspiration.',
-        primary: 'Explore Plans',
-        secondary: 'Take a Tour',
+        badge: 'Live workspace',
+        title: 'Creative Operations Overview',
+        body: 'Monitor app rollout, shared assets, project delivery, and enablement progress from one controlled workspace.',
+        primary: 'Review plan',
+        secondary: 'Audit activity',
       },
       apps: {
-        title: 'Creative Apps Collection',
-        body: 'Discover the full suite of visual, motion, layout, and development tools for production teams.',
-        primary: 'Install Desktop App',
+        title: 'Application Portfolio',
+        body: 'Review installed tools, rollout status, update queues, and ownership across the production suite.',
+        primary: 'Install desktop app',
       },
       files: {
-        title: 'Your Creative Files',
-        body: 'Access, manage, and share design files across every workspace without losing context.',
-        primary: 'Upload Files',
-        secondary: 'Cloud Storage',
+        title: 'Asset Library',
+        body: 'Track shared files, ownership, storage scope, and recent changes across every active workspace.',
+        primary: 'Upload files',
+        secondary: 'Cloud storage',
       },
       projects: {
-        title: 'Project Management',
-        body: 'Organize creative work into projects, track progress, and keep collaborators aligned.',
-        primary: 'New Project',
+        title: 'Project Delivery',
+        body: 'Manage active initiatives, deadlines, project health, and collaborator workload from one view.',
+        primary: 'New project',
       },
       learn: {
-        title: 'Learn & Grow',
-        body: 'Expand creative skills with focused tutorials, guided courses, and team learning paths.',
-        primary: 'Upgrade to Pro',
+        title: 'Team Enablement',
+        body: 'Coordinate training paths, completion status, and guided learning for production teams.',
+        primary: 'Upgrade seats',
       },
     },
     sections: {
@@ -281,32 +281,32 @@ const COPY = {
     },
     heroes: {
       home: {
-        badge: 'Premium',
-        title: 'Orbit Canvas Creative Suiteへようこそ',
-        body: 'デザインアプリ、共有ファイル、進行中プロジェクト、学習導線、コミュニティの刺激をまとめる静かな制作拠点です。',
-        primary: 'プランを見る',
-        secondary: 'ツアーを見る',
+        badge: '稼働中ワークスペース',
+        title: '制作オペレーション概要',
+        body: 'アプリ展開、共有アセット、プロジェクト進行、学習状況を1つの管理画面で確認できます。',
+        primary: 'プラン確認',
+        secondary: '活動ログ',
       },
       apps: {
-        title: 'クリエイティブアプリ一覧',
-        body: 'ビジュアル、モーション、レイアウト、開発まで、制作チーム向けのツール群を確認できます。',
-        primary: 'デスクトップ版を入手',
+        title: 'アプリケーション管理',
+        body: '導入済みツール、展開状況、更新待ち、担当範囲を制作チーム単位で管理します。',
+        primary: 'デスクトップ版を導入',
       },
       files: {
-        title: '制作ファイル',
-        body: 'すべてのワークスペースのデザインファイルを、文脈を失わずに管理・共有できます。',
+        title: 'アセットライブラリ',
+        body: '共有ファイル、所有者、ストレージ範囲、直近の変更をワークスペース横断で追跡します。',
         primary: 'ファイルをアップロード',
         secondary: 'クラウドストレージ',
       },
       projects: {
-        title: 'プロジェクト管理',
-        body: '制作物をプロジェクト単位で整理し、進捗と共同作業の状態を揃えます。',
+        title: 'プロジェクト進行管理',
+        body: '進行中案件、期限、健全性、共同作業者の負荷を一画面で管理します。',
         primary: '新規プロジェクト',
       },
       learn: {
-        title: '学びを広げる',
-        body: '集中チュートリアル、ガイド付きコース、チーム用ラーニングパスで制作力を伸ばします。',
-        primary: 'Proにアップグレード',
+        title: 'チーム育成',
+        body: '制作チーム向けの学習パス、完了状況、ガイド付きトレーニングを整理します。',
+        primary: '席数をアップグレード',
       },
     },
     sections: {
@@ -980,68 +980,68 @@ function ToneIcon({ tone, icon: Icon }: { tone: Tone; icon: LucideIcon }) {
   switch (tone) {
     case 'violet':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-zinc-200 text-zinc-700 dark:bg-zinc-300/[0.14] dark:text-zinc-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-zinc-200 text-zinc-700 dark:bg-zinc-300/[0.14] dark:text-zinc-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'orange':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-300/[0.12] dark:text-amber-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-300/[0.12] dark:text-amber-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'pink':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-stone-200 text-stone-700 dark:bg-stone-300/[0.12] dark:text-stone-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-stone-200 text-stone-700 dark:bg-stone-300/[0.12] dark:text-stone-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'blue':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-zinc-100 text-zinc-800 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-zinc-100 text-zinc-800 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'red':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-rose-100 text-rose-700 dark:bg-rose-300/[0.12] dark:text-rose-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-rose-100 text-rose-700 dark:bg-rose-300/[0.12] dark:text-rose-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'fuchsia':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-zinc-100 text-zinc-700 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-zinc-100 text-zinc-700 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'teal':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-300/[0.14] dark:text-emerald-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-emerald-100 text-emerald-800 dark:bg-emerald-300/[0.14] dark:text-emerald-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'emerald':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-300/[0.12] dark:text-emerald-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-emerald-100 text-emerald-800 dark:bg-emerald-300/[0.12] dark:text-emerald-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'indigo':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-neutral-100 text-neutral-800 dark:bg-neutral-300/[0.12] dark:text-neutral-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-neutral-100 text-neutral-800 dark:bg-neutral-300/[0.12] dark:text-neutral-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'amber':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-yellow-100 text-yellow-800 dark:bg-yellow-300/[0.12] dark:text-yellow-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-yellow-100 text-yellow-800 dark:bg-yellow-300/[0.12] dark:text-yellow-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'purple':
     default:
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-zinc-100 text-zinc-700 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-zinc-100 text-zinc-700 dark:bg-zinc-300/[0.12] dark:text-zinc-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
@@ -1090,7 +1090,7 @@ function LanguageSwitcher({
       data-melius-ui-id="language-switcher"
       data-melius-ui-role="control"
       aria-label={copy.language.label}
-      className="hidden h-10 items-center rounded-2xl border border-zinc-950/[0.08] bg-white/[0.62] p-1 text-xs font-black text-zinc-600 backdrop-blur dark:border-white/[0.10] dark:bg-white/[0.06] dark:text-zinc-300 sm:inline-flex"
+      className="hidden h-9 items-center rounded-lg border border-zinc-950/[0.08] bg-white/[0.70] p-1 text-xs font-black text-zinc-600 backdrop-blur dark:border-white/[0.10] dark:bg-white/[0.06] dark:text-zinc-300 sm:inline-flex"
     >
       <LanguageOptionButton selected={language === 'ja'} label={copy.language.ja} onClick={() => onLanguageChange('ja')} />
       <LanguageOptionButton selected={language === 'en'} label={copy.language.en} onClick={() => onLanguageChange('en')} />
@@ -1105,7 +1105,7 @@ function LanguageOptionButton({ selected, label, onClick }: { selected: boolean;
         type="button"
         aria-pressed="true"
         onClick={onClick}
-        className="h-8 min-w-9 rounded-xl bg-zinc-950 px-2.5 text-white dark:bg-white dark:text-zinc-950"
+        className="h-7 min-w-8 rounded-md bg-zinc-950 px-2.5 text-white dark:bg-white dark:text-zinc-950"
       >
         {label}
       </button>
@@ -1117,7 +1117,7 @@ function LanguageOptionButton({ selected, label, onClick }: { selected: boolean;
       type="button"
       aria-pressed="false"
       onClick={onClick}
-      className="h-8 min-w-9 rounded-xl px-2.5 transition-colors hover:bg-zinc-950/[0.06] hover:text-zinc-950 dark:hover:bg-white/[0.10] dark:hover:text-white"
+      className="h-7 min-w-8 rounded-md px-2.5 transition-colors hover:bg-zinc-950/[0.06] hover:text-zinc-950 dark:hover:bg-white/[0.10] dark:hover:text-white"
     >
       {label}
     </button>
@@ -1138,7 +1138,7 @@ function ThemeSwitcher({
       data-melius-ui-id="theme-switcher"
       data-melius-ui-role="control"
       aria-label={copy.theme.label}
-      className="hidden h-10 items-center rounded-2xl border border-zinc-950/[0.08] bg-white/[0.62] p-1 text-xs font-black text-zinc-600 backdrop-blur dark:border-white/[0.10] dark:bg-white/[0.06] dark:text-zinc-300 lg:inline-flex"
+      className="hidden h-9 items-center rounded-lg border border-zinc-950/[0.08] bg-white/[0.70] p-1 text-xs font-black text-zinc-600 backdrop-blur dark:border-white/[0.10] dark:bg-white/[0.06] dark:text-zinc-300 lg:inline-flex"
     >
       <ThemeOptionButton selected={theme === 'light'} label={copy.theme.light} onClick={() => onThemeChange('light')} icon={Sun} />
       <ThemeOptionButton selected={theme === 'system'} label={copy.theme.system} onClick={() => onThemeChange('system')} icon={Monitor} />
@@ -1165,7 +1165,7 @@ function ThemeOptionButton({
         aria-pressed="true"
         title={label}
         onClick={onClick}
-        className="inline-flex h-8 min-w-9 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2.5 text-white dark:bg-white dark:text-zinc-950"
+        className="inline-flex h-7 min-w-8 items-center justify-center gap-1.5 rounded-md bg-zinc-950 px-2.5 text-white dark:bg-white dark:text-zinc-950"
       >
         <Icon className="h-3.5 w-3.5" aria-hidden="true" />
         <span className="hidden xl:inline">{label}</span>
@@ -1179,7 +1179,7 @@ function ThemeOptionButton({
       aria-pressed="false"
       title={label}
       onClick={onClick}
-      className="inline-flex h-8 min-w-9 items-center justify-center gap-1.5 rounded-xl px-2.5 transition-colors hover:bg-zinc-950/[0.06] hover:text-zinc-950 dark:hover:bg-white/[0.10] dark:hover:text-white"
+      className="inline-flex h-7 min-w-8 items-center justify-center gap-1.5 rounded-md px-2.5 transition-colors hover:bg-zinc-950/[0.06] hover:text-zinc-950 dark:hover:bg-white/[0.10] dark:hover:text-white"
     >
       <Icon className="h-3.5 w-3.5" aria-hidden="true" />
       <span className="hidden xl:inline">{label}</span>
@@ -1281,7 +1281,7 @@ function SidebarContent({
                         type="button"
                         data-melius-ui-id={`${idPrefix}-${item.id}-child-${childIndex + 1}`}
                         data-melius-ui-role="navigation-item"
-                        className="block w-full rounded-2xl px-3 py-2 text-left text-sm font-semibold text-zinc-500 transition-colors hover:bg-zinc-950/[0.05] hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-white/[0.09] dark:hover:text-white"
+                        className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-zinc-500 transition-colors hover:bg-zinc-950/[0.05] hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-white/[0.09] dark:hover:text-white"
                       >
                         {child}
                       </button>
@@ -1304,7 +1304,7 @@ function SidebarContent({
           </RowButton>
           <RowButton dataId={`${idPrefix}-user-plan`} roleName="account">
             <span className="flex min-w-0 items-center gap-3">
-              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-zinc-950 to-stone-700 text-xs font-black text-white">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-gradient-to-br from-zinc-950 to-stone-700 text-xs font-black text-white">
                 JL
               </span>
               <span className="truncate">{copy.userName}</span>
@@ -1319,6 +1319,7 @@ function SidebarContent({
 
 function GradientHero({
   variant,
+  language,
   badge,
   title,
   body,
@@ -1326,6 +1327,7 @@ function GradientHero({
   secondary,
 }: {
   variant: TabId;
+  language: Language;
   badge?: string;
   title: string;
   body: string;
@@ -1334,34 +1336,72 @@ function GradientHero({
 }) {
   if (variant === 'apps') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-neutral-950 via-zinc-900 to-stone-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame variant={variant} language={language} className="bg-gradient-to-r from-neutral-950 via-zinc-900 to-stone-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'files') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-neutral-950 via-emerald-950 to-stone-900" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame variant={variant} language={language} className="bg-gradient-to-r from-neutral-950 via-emerald-950 to-stone-900" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'projects') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-neutral-950 via-stone-900 to-zinc-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame variant={variant} language={language} className="bg-gradient-to-r from-neutral-950 via-stone-900 to-zinc-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'learn') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-neutral-950 via-green-950 to-stone-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame variant={variant} language={language} className="bg-gradient-to-r from-neutral-950 via-green-950 to-stone-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   return (
-    <HeroFrame className="bg-gradient-to-r from-neutral-950 via-zinc-900 to-emerald-950" badge={badge} title={title} body={body} primary={primary} secondary={secondary} showGlobe />
+    <HeroFrame variant={variant} language={language} className="bg-gradient-to-r from-neutral-950 via-zinc-900 to-emerald-950" badge={badge} title={title} body={body} primary={primary} secondary={secondary} showGlobe />
   );
 }
 
+function getHeroMetrics(variant: TabId): Array<{ label: Record<Language, string>; value: string }> {
+  switch (variant) {
+    case 'apps':
+      return [
+        { label: { en: 'Installed', ja: '導入済み' }, value: '9' },
+        { label: { en: 'Pending updates', ja: '更新待ち' }, value: '2' },
+        { label: { en: 'Rollout', ja: '展開率' }, value: '96%' },
+      ];
+    case 'files':
+      return [
+        { label: { en: 'Shared files', ja: '共有ファイル' }, value: '68' },
+        { label: { en: 'Storage used', ja: '使用容量' }, value: '1.8TB' },
+        { label: { en: 'Recent changes', ja: '直近変更' }, value: '24' },
+      ];
+    case 'projects':
+      return [
+        { label: { en: 'On track', ja: '順調' }, value: '3' },
+        { label: { en: 'Due this week', ja: '今週期限' }, value: '2' },
+        { label: { en: 'Team load', ja: '稼働率' }, value: '82%' },
+      ];
+    case 'learn':
+      return [
+        { label: { en: 'Learning paths', ja: '学習パス' }, value: '3' },
+        { label: { en: 'Completion', ja: '完了率' }, value: '30%' },
+        { label: { en: 'Saved courses', ja: '保存コース' }, value: '12' },
+      ];
+    case 'home':
+    default:
+      return [
+        { label: { en: 'Active projects', ja: '進行中案件' }, value: '4' },
+        { label: { en: 'Installed apps', ja: '導入アプリ' }, value: '9' },
+        { label: { en: 'Shared assets', ja: '共有アセット' }, value: '68' },
+      ];
+  }
+}
+
 function HeroFrame({
+  variant,
+  language,
   className,
   badge,
   title,
@@ -1370,6 +1410,8 @@ function HeroFrame({
   secondary,
   showGlobe,
 }: {
+  variant: TabId;
+  language: Language;
   className: string;
   badge?: string;
   title: string;
@@ -1378,27 +1420,29 @@ function HeroFrame({
   secondary?: string;
   showGlobe?: boolean;
 }) {
+  const metrics = getHeroMetrics(variant);
+
   return (
     <section
       data-melius-ui-id="workspace-hero"
       data-melius-ui-role="hero"
-      className={`${className} hero-panel overflow-hidden rounded-3xl p-6 text-white shadow-2xl shadow-zinc-950/14 sm:p-8`}
+      className={`${className} hero-panel overflow-hidden rounded-lg border border-white/[0.10] p-5 text-white shadow-xl shadow-zinc-950/10 sm:p-6`}
     >
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-        <div className="max-w-2xl space-y-4">
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] lg:items-center">
+        <div className="max-w-3xl space-y-3">
           {badge ? <StrongBadge>{badge}</StrongBadge> : null}
-          <h2 data-melius-ui-id="hero-title" data-melius-ui-role="heading" className="text-3xl font-black leading-tight tracking-normal sm:text-4xl">
+          <h2 data-melius-ui-id="hero-title" data-melius-ui-role="heading" className="text-2xl font-black leading-tight tracking-normal sm:text-3xl">
             {title}
           </h2>
-          <p data-melius-ui-id="hero-body" data-melius-ui-role="text" className="max-w-2xl text-sm font-medium leading-6 text-white/[0.82] sm:text-base">
+          <p data-melius-ui-id="hero-body" data-melius-ui-role="text" className="max-w-2xl text-sm font-medium leading-6 text-white/[0.76]">
             {body}
           </p>
-          <div data-melius-ui-id="hero-actions" data-melius-ui-role="actions" className="flex flex-wrap gap-3">
+          <div data-melius-ui-id="hero-actions" data-melius-ui-role="actions" className="flex flex-wrap gap-2">
             <button
               type="button"
               data-melius-ui-id="hero-primary-action"
               data-melius-ui-role="button"
-              className="inline-flex min-h-10 items-center justify-center rounded-2xl bg-white px-4 py-2 text-sm font-black text-zinc-900 transition hover:bg-white/[0.90]"
+              className="inline-flex min-h-9 items-center justify-center rounded-lg bg-white px-3.5 py-2 text-sm font-black text-zinc-900 transition hover:bg-white/[0.90]"
             >
               {primary}
             </button>
@@ -1407,25 +1451,35 @@ function HeroFrame({
                 type="button"
                 data-melius-ui-id="hero-secondary-action"
                 data-melius-ui-role="button"
-                className="inline-flex min-h-10 items-center justify-center rounded-2xl border border-white/[0.65] bg-white/[0.05] px-4 py-2 text-sm font-black text-white backdrop-blur transition hover:bg-white/[0.12]"
+                className="inline-flex min-h-9 items-center justify-center rounded-lg border border-white/[0.45] bg-white/[0.04] px-3.5 py-2 text-sm font-black text-white backdrop-blur transition hover:bg-white/[0.10]"
               >
                 {secondary}
               </button>
             ) : null}
           </div>
         </div>
-        {showGlobe ? (
-          <div data-melius-ui-id="hero-orbit-globe" data-melius-ui-role="visual" className="hidden lg:grid lg:h-44 lg:w-44 lg:place-items-center">
-            <div className="orbit-globe relative h-40 w-40 rounded-full bg-white/[0.10] backdrop-blur-md">
-              <span className="absolute inset-3 rounded-full border border-white/[0.22]" />
-              <span className="absolute inset-7 rounded-full border border-white/[0.28]" />
-              <span className="absolute inset-11 rounded-full border border-white/[0.38]" />
-              <span className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/[0.30]" />
-              <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-white/[0.30]" />
-              <span className="absolute inset-16 rounded-full bg-white/[0.68]" />
+        <div data-melius-ui-id="hero-status-panel" data-melius-ui-role="status" className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+          {showGlobe ? (
+            <div data-melius-ui-id="hero-orbit-globe" data-melius-ui-role="visual" className="hidden min-h-24 items-center justify-between rounded-lg border border-white/[0.12] bg-white/[0.06] px-4 py-3 backdrop-blur lg:flex">
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/[0.58]">
+                {language === 'ja' ? '運用マップ' : 'Orbit map'}
+              </span>
+              <div className="orbit-globe relative h-20 w-20 rounded-full bg-white/[0.08]">
+                <span className="absolute inset-2 rounded-full border border-white/[0.22]" />
+                <span className="absolute inset-4 rounded-full border border-white/[0.28]" />
+                <span className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/[0.22]" />
+                <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-white/[0.22]" />
+                <span className="absolute inset-8 rounded-full bg-white/[0.64]" />
+              </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+          {metrics.map((metric, index) => (
+            <div key={metric.label.en} data-melius-ui-id={`hero-metric-${index + 1}`} data-melius-ui-role="metric" className="rounded-lg border border-white/[0.12] bg-white/[0.06] px-4 py-3 backdrop-blur">
+              <div className="text-xs font-bold uppercase tracking-[0.12em] text-white/[0.52]">{metric.label[language]}</div>
+              <div className="mt-1 text-2xl font-black leading-none">{metric.value}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -1434,7 +1488,7 @@ function HeroFrame({
 function SectionTitle({ title, action, actionId }: { title: string; action?: string; actionId?: string }) {
   return (
     <div className="flex items-center justify-between gap-3">
-      <h2 className="text-2xl font-black tracking-normal text-zinc-950 dark:text-white">{title}</h2>
+      <h2 className="text-xl font-black tracking-normal text-zinc-950 dark:text-white">{title}</h2>
       {action ? (
         <GhostButton dataId={actionId ?? 'section-action'} roleName="button">
           {action}
@@ -1638,9 +1692,10 @@ function FilterRail({ children, dataId }: { children: ReactNode; dataId: string 
 
 function HomeContent({ copy, language }: { copy: AppCopy; language: Language }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <GradientHero
         variant="home"
+        language={language}
         badge={copy.heroes.home.badge}
         title={copy.heroes.home.title}
         body={copy.heroes.home.body}
@@ -1657,7 +1712,7 @@ function HomeContent({ copy, language }: { copy: AppCopy; language: Language }) 
         </div>
       </section>
 
-      <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
         <section data-melius-ui-id="recent-files-section" data-melius-ui-role="section" className="space-y-4">
           <SectionTitle title={copy.sections.recentFiles} action={copy.actions.viewAll} actionId="recent-files-view-all" />
           <PanelSurface>
@@ -1714,8 +1769,8 @@ function HomeContent({ copy, language }: { copy: AppCopy; language: Language }) 
 
 function AppsContent({ copy, language }: { copy: AppCopy; language: Language }) {
   return (
-    <div className="space-y-8">
-      <GradientHero variant="apps" title={copy.heroes.apps.title} body={copy.heroes.apps.body} primary={copy.heroes.apps.primary} />
+    <div className="space-y-6">
+      <GradientHero variant="apps" language={language} title={copy.heroes.apps.title} body={copy.heroes.apps.body} primary={copy.heroes.apps.primary} />
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <FilterRail dataId="app-category-filters">
           <SecondaryButton dataId="filter-apps-all" roleName="filter">{copy.filters.allCategories}</SecondaryButton>
@@ -1759,9 +1814,10 @@ function AppsContent({ copy, language }: { copy: AppCopy; language: Language }) 
 
 function FilesContent({ copy, language }: { copy: AppCopy; language: Language }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <GradientHero
         variant="files"
+        language={language}
         title={copy.heroes.files.title}
         body={copy.heroes.files.body}
         primary={copy.heroes.files.primary}
@@ -1789,7 +1845,7 @@ function FilesContent({ copy, language }: { copy: AppCopy; language: Language })
 
       <section data-melius-ui-id="all-files-section" data-melius-ui-role="section" className="space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-2xl font-black tracking-normal text-zinc-950 dark:text-white">{copy.sections.allFiles}</h2>
+          <h2 className="text-xl font-black tracking-normal text-zinc-950 dark:text-white">{copy.sections.allFiles}</h2>
           <div className="flex gap-2">
             <SecondaryButton dataId="files-filter-action" roleName="button"><PanelLeft className="h-4 w-4" />{copy.actions.filter}</SecondaryButton>
             <SecondaryButton dataId="files-sort-action" roleName="button"><ArrowUpDown className="h-4 w-4" />{copy.actions.sort}</SecondaryButton>
@@ -1815,8 +1871,8 @@ function FilesContent({ copy, language }: { copy: AppCopy; language: Language })
 
 function ProjectsContent({ copy, language }: { copy: AppCopy; language: Language }) {
   return (
-    <div className="space-y-8">
-      <GradientHero variant="projects" title={copy.heroes.projects.title} body={copy.heroes.projects.body} primary={copy.heroes.projects.primary} />
+    <div className="space-y-6">
+      <GradientHero variant="projects" language={language} title={copy.heroes.projects.title} body={copy.heroes.projects.body} primary={copy.heroes.projects.primary} />
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <FilterRail dataId="project-filters">
           <SecondaryButton dataId="filter-projects-all" roleName="filter"><Layers className="h-4 w-4" />{copy.filters.allProjects}</SecondaryButton>
@@ -1844,7 +1900,7 @@ function ProjectsContent({ copy, language }: { copy: AppCopy; language: Language
           ))}
           <CardSurface data-melius-ui-id="project-create-card" data-melius-ui-role="card">
             <div className="flex h-full min-h-[260px] flex-col items-center justify-center p-8 text-center">
-              <span className="grid h-14 w-14 place-items-center rounded-full bg-zinc-950/[0.06] text-zinc-700 dark:bg-white/[0.10] dark:text-zinc-200">
+              <span className="grid h-12 w-12 place-items-center rounded-lg bg-zinc-950/[0.06] text-zinc-700 dark:bg-white/[0.10] dark:text-zinc-200">
                 <Plus className="h-6 w-6" aria-hidden="true" />
               </span>
               <h3 className="mt-4 text-lg font-black text-zinc-950 dark:text-white">{copy.actions.createProject}</h3>
@@ -1885,8 +1941,8 @@ function ProjectsContent({ copy, language }: { copy: AppCopy; language: Language
 
 function LearnContent({ copy, language }: { copy: AppCopy; language: Language }) {
   return (
-    <div className="space-y-8">
-      <GradientHero variant="learn" title={copy.heroes.learn.title} body={copy.heroes.learn.body} primary={copy.heroes.learn.primary} />
+    <div className="space-y-6">
+      <GradientHero variant="learn" language={language} title={copy.heroes.learn.title} body={copy.heroes.learn.body} primary={copy.heroes.learn.primary} />
       <FilterRail dataId="learn-filters">
         <SecondaryButton dataId="filter-tutorials-all" roleName="filter"><Play className="h-4 w-4" />{copy.sections.featuredTutorials}</SecondaryButton>
         <SecondaryButton dataId="filter-courses" roleName="filter"><BookOpen className="h-4 w-4" />{copy.filters.courses}</SecondaryButton>
@@ -1903,7 +1959,7 @@ function LearnContent({ copy, language }: { copy: AppCopy; language: Language })
               <div className="relative aspect-video overflow-hidden">
                 <MiniToneBlock tone={tutorial.tone} />
                 <span className="absolute inset-0 grid place-items-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-full bg-white/[0.86] text-zinc-950 shadow-xl shadow-black/20">
+                  <span className="grid h-12 w-12 place-items-center rounded-lg bg-white/[0.86] text-zinc-950 shadow-lg shadow-black/15">
                     <Play className="h-6 w-6" aria-hidden="true" />
                   </span>
                 </span>
@@ -1945,7 +2001,7 @@ function LearnContent({ copy, language }: { copy: AppCopy; language: Language })
           <div className="divide-y divide-zinc-950/[0.08] dark:divide-white/[0.08]">
             {tutorials.slice(3, 5).map((tutorial) => (
               <div key={tutorial.id} data-melius-ui-id={`course-row-${tutorial.id}`} data-melius-ui-role="list-item" className="grid gap-3 p-4 md:grid-cols-[5rem_minmax(0,1fr)_auto] md:items-center">
-                <div className="h-20 w-20 overflow-hidden rounded-2xl">
+                <div className="h-20 w-20 overflow-hidden rounded-lg">
                   <MiniToneBlock tone={tutorial.tone} />
                 </div>
                 <div className="min-w-0">
@@ -2113,18 +2169,18 @@ function App() {
                   5
                 </span>
               </span>
-              <span data-melius-ui-id="header-avatar" data-melius-ui-role="avatar" className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-gradient-to-br from-zinc-950 to-stone-700 text-xs font-black text-white dark:border-white">
+              <span data-melius-ui-id="header-avatar" data-melius-ui-role="avatar" className="grid h-9 w-9 shrink-0 place-items-center rounded-md border border-zinc-950 bg-gradient-to-br from-zinc-950 to-stone-700 text-xs font-black text-white dark:border-white">
                 JL
               </span>
             </div>
           </WorkspaceHeader>
 
-          <main data-melius-ui-id="workspace-main" data-melius-ui-role="main" className="thin-scrollbar min-h-0 flex-1 overflow-y-auto p-4 sm:p-5 lg:p-6">
-            <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <main data-melius-ui-id="workspace-main" data-melius-ui-role="main" className="thin-scrollbar min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+            <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
               <div
                 data-melius-ui-id="workspace-tabs"
                 data-melius-ui-role="tabs"
-                className="grid w-full grid-cols-5 rounded-2xl bg-zinc-950/[0.06] p-1 dark:bg-white/[0.08] lg:max-w-[620px]"
+                className="grid w-full grid-cols-5 rounded-lg bg-zinc-950/[0.06] p-1 dark:bg-white/[0.08] lg:max-w-[620px]"
               >
                 {tabs.map((tab) => (
                   <TabButton
