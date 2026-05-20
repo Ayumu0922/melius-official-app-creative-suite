@@ -34,17 +34,17 @@ export function AppShell({ children, ...props }: HTMLAttributes<HTMLDivElement> 
   return (
     <div
       {...props}
-      className="relative min-h-screen overflow-hidden bg-[#f6f7f9] text-zinc-950 antialiased dark:bg-[#080b12] dark:text-zinc-50"
+      className="relative min-h-screen overflow-hidden bg-[#f5f5f5] text-zinc-950 antialiased dark:bg-[#0b0b0a] dark:text-zinc-50"
     >
       <div
         data-melius-ui-id="app-ambient-gradient"
         data-melius-ui-role="background"
-        className="ambient-gradient pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(248,250,252,0.99),rgba(241,245,249,0.96)_38%,rgba(226,232,240,0.88)_72%,rgba(236,241,245,0.92))] dark:bg-[linear-gradient(135deg,rgba(8,11,18,1),rgba(15,23,42,0.98)_38%,rgba(20,36,50,0.94)_74%,rgba(8,27,34,0.94))]"
+        className="ambient-gradient pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(250,250,250,0.99),rgba(245,245,245,0.96)_38%,rgba(229,229,229,0.86)_72%,rgba(250,250,250,0.94))] dark:bg-[linear-gradient(135deg,rgba(10,10,10,1),rgba(24,24,27,0.98)_38%,rgba(39,39,42,0.94)_74%,rgba(28,25,23,0.94))]"
       />
       <div
         data-melius-ui-id="app-ambient-grid"
         data-melius-ui-role="background"
-        className="pointer-events-none absolute inset-0 opacity-[0.36] [background-image:linear-gradient(rgba(15,23,42,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.055)_1px,transparent_1px)] [background-size:42px_42px] dark:opacity-[0.22] dark:[background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)]"
+        className="pointer-events-none absolute inset-0 opacity-[0.30] [background-image:linear-gradient(rgba(24,24,27,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(24,24,27,0.05)_1px,transparent_1px)] [background-size:42px_42px] dark:opacity-[0.18] dark:[background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)]"
       />
       <div className="relative z-10 min-h-screen">{children}</div>
     </div>
@@ -112,7 +112,7 @@ export function BrandMark({ children, ...props }: HTMLAttributes<HTMLDivElement>
   return (
     <div
       {...props}
-      className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-blue-900 to-slate-700 text-white shadow-lg shadow-slate-950/15 dark:from-slate-100 dark:via-blue-200 dark:to-teal-200 dark:text-slate-950"
+      className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-zinc-950 via-stone-800 to-neutral-600 text-white shadow-lg shadow-zinc-950/15 dark:from-stone-100 dark:via-neutral-200 dark:to-amber-100 dark:text-zinc-950"
     >
       {children}
     </div>
@@ -174,7 +174,7 @@ export function PrimaryButton({ dataId, roleName, children, onClick, disabled, t
       data-melius-ui-id={dataId}
       data-melius-ui-role={roleName}
       onClick={onClick}
-      className="inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl bg-slate-950 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-slate-950/10 transition duration-200 hover:-translate-y-0.5 hover:bg-blue-900 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200"
+      className="inline-flex min-h-10 items-center justify-center gap-2 rounded-2xl bg-zinc-950 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-zinc-950/10 transition duration-200 hover:-translate-y-0.5 hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-stone-200"
     >
       {children}
     </button>
@@ -310,7 +310,7 @@ export function SearchInput({ dataId, roleName, label, icon, ...props }: SearchI
       {icon}
       <input
         {...props}
-        className="h-10 w-full rounded-2xl border border-transparent bg-zinc-950/[0.06] px-9 text-sm font-medium text-zinc-950 outline-none transition placeholder:text-zinc-500 focus:border-blue-700 dark:bg-white/[0.08] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-teal-300"
+        className="h-10 w-full rounded-2xl border border-transparent bg-zinc-950/[0.06] px-9 text-sm font-medium text-zinc-950 outline-none transition placeholder:text-zinc-500 focus:border-stone-600 dark:bg-white/[0.08] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-amber-200"
       />
     </label>
   );
@@ -342,7 +342,7 @@ export function CardSurface({ children, ...props }: HTMLAttributes<HTMLDivElemen
   return (
     <div
       {...props}
-      className="app-card-enter overflow-hidden rounded-3xl border border-zinc-950/[0.08] bg-white/[0.82] shadow-sm shadow-zinc-950/[0.04] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-blue-800/25 hover:bg-white dark:border-white/[0.08] dark:bg-white/[0.055] dark:shadow-black/20 dark:hover:border-teal-200/25 dark:hover:bg-white/[0.085]"
+      className="app-card-enter overflow-hidden rounded-3xl border border-zinc-950/[0.08] bg-white/[0.84] shadow-sm shadow-zinc-950/[0.04] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-stone-600/25 hover:bg-white dark:border-white/[0.08] dark:bg-white/[0.055] dark:shadow-black/20 dark:hover:border-stone-200/25 dark:hover:bg-white/[0.085]"
     >
       {children}
     </div>
@@ -368,7 +368,7 @@ export function ProgressBar({ value, dataId }: { value: number; dataId: string }
       className="h-2 overflow-hidden rounded-full bg-zinc-950/[0.08] dark:bg-white/[0.10]"
     >
       <div
-        className="h-full rounded-full bg-gradient-to-r from-slate-800 via-blue-800 to-teal-700 dark:from-slate-200 dark:via-blue-200 dark:to-teal-200"
+        className="h-full rounded-full bg-gradient-to-r from-zinc-900 via-stone-700 to-emerald-700 dark:from-stone-200 dark:via-amber-200 dark:to-emerald-200"
         style={{ width: `${Math.max(0, Math.min(100, value))}%` }}
       />
     </div>
