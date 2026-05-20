@@ -980,68 +980,68 @@ function ToneIcon({ tone, icon: Icon }: { tone: Tone; icon: LucideIcon }) {
   switch (tone) {
     case 'violet':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-violet-100 text-violet-600 dark:bg-violet-300/[0.14] dark:text-violet-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-slate-200 text-slate-700 dark:bg-slate-300/[0.14] dark:text-slate-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'orange':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-orange-100 text-orange-600 dark:bg-orange-300/[0.14] dark:text-orange-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-300/[0.12] dark:text-amber-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'pink':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-pink-100 text-pink-600 dark:bg-pink-300/[0.14] dark:text-pink-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-stone-200 text-stone-700 dark:bg-stone-300/[0.12] dark:text-stone-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'blue':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue-100 text-blue-600 dark:bg-blue-300/[0.14] dark:text-blue-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue-100 text-blue-800 dark:bg-blue-300/[0.14] dark:text-blue-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'red':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-red-100 text-red-600 dark:bg-red-300/[0.14] dark:text-red-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-rose-100 text-rose-700 dark:bg-rose-300/[0.12] dark:text-rose-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'fuchsia':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-fuchsia-100 text-fuchsia-600 dark:bg-fuchsia-300/[0.14] dark:text-fuchsia-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-slate-100 text-slate-700 dark:bg-slate-300/[0.12] dark:text-slate-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'teal':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-teal-100 text-teal-600 dark:bg-teal-300/[0.14] dark:text-teal-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-teal-100 text-teal-800 dark:bg-teal-300/[0.14] dark:text-teal-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'emerald':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-600 dark:bg-emerald-300/[0.14] dark:text-emerald-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-300/[0.12] dark:text-emerald-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'indigo':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-indigo-100 text-indigo-600 dark:bg-indigo-300/[0.14] dark:text-indigo-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-sky-100 text-sky-800 dark:bg-sky-300/[0.12] dark:text-sky-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'amber':
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-300/[0.14] dark:text-amber-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-yellow-100 text-yellow-800 dark:bg-yellow-300/[0.12] dark:text-yellow-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
     case 'purple':
     default:
       return (
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-purple-100 text-purple-600 dark:bg-purple-300/[0.14] dark:text-purple-200">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-slate-100 text-slate-700 dark:bg-slate-300/[0.12] dark:text-slate-200">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
       );
@@ -1051,28 +1051,28 @@ function ToneIcon({ tone, icon: Icon }: { tone: Tone; icon: LucideIcon }) {
 function MiniToneBlock({ tone }: { tone: Tone }) {
   switch (tone) {
     case 'orange':
-      return <span className="block h-full w-full bg-gradient-to-br from-orange-400 via-amber-500 to-red-500" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-amber-200 via-stone-400 to-slate-700" />;
     case 'pink':
-      return <span className="block h-full w-full bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-stone-200 via-slate-400 to-slate-800" />;
     case 'blue':
-      return <span className="block h-full w-full bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-sky-200 via-blue-700 to-slate-900" />;
     case 'teal':
-      return <span className="block h-full w-full bg-gradient-to-br from-teal-400 via-cyan-500 to-blue-600" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-teal-200 via-teal-700 to-slate-900" />;
     case 'emerald':
-      return <span className="block h-full w-full bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-emerald-200 via-teal-700 to-slate-900" />;
     case 'indigo':
-      return <span className="block h-full w-full bg-gradient-to-br from-indigo-500 via-violet-600 to-blue-700" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-blue-200 via-blue-800 to-slate-950" />;
     case 'amber':
-      return <span className="block h-full w-full bg-gradient-to-br from-amber-300 via-orange-500 to-rose-500" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-yellow-200 via-amber-600 to-slate-800" />;
     case 'purple':
-      return <span className="block h-full w-full bg-gradient-to-br from-purple-500 via-fuchsia-600 to-indigo-700" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-slate-300 via-blue-800 to-slate-950" />;
     case 'red':
-      return <span className="block h-full w-full bg-gradient-to-br from-red-500 via-rose-600 to-orange-600" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-rose-200 via-rose-700 to-slate-900" />;
     case 'fuchsia':
-      return <span className="block h-full w-full bg-gradient-to-br from-fuchsia-500 via-pink-600 to-violet-700" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-zinc-200 via-slate-600 to-blue-950" />;
     case 'violet':
     default:
-      return <span className="block h-full w-full bg-gradient-to-br from-violet-500 via-indigo-600 to-sky-600" />;
+      return <span className="block h-full w-full bg-gradient-to-br from-slate-200 via-blue-800 to-slate-950" />;
   }
 }
 
@@ -1304,7 +1304,7 @@ function SidebarContent({
           </RowButton>
           <RowButton dataId={`${idPrefix}-user-plan`} roleName="account">
             <span className="flex min-w-0 items-center gap-3">
-              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 text-xs font-black text-white">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-slate-900 to-blue-800 text-xs font-black text-white">
                 JL
               </span>
               <span className="truncate">{copy.userName}</span>
@@ -1334,30 +1334,30 @@ function GradientHero({
 }) {
   if (variant === 'apps') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-pink-600 via-red-600 to-orange-600" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame className="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'files') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame className="bg-gradient-to-r from-slate-950 via-teal-950 to-blue-950" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'projects') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame className="bg-gradient-to-r from-slate-950 via-slate-800 to-blue-950" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   if (variant === 'learn') {
     return (
-      <HeroFrame className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
+      <HeroFrame className="bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-800" badge={badge} title={title} body={body} primary={primary} secondary={secondary} />
     );
   }
 
   return (
-    <HeroFrame className="bg-gradient-to-r from-violet-600 via-indigo-600 to-blue-600" badge={badge} title={title} body={body} primary={primary} secondary={secondary} showGlobe />
+    <HeroFrame className="bg-gradient-to-r from-slate-950 via-blue-950 to-teal-950" badge={badge} title={title} body={body} primary={primary} secondary={secondary} showGlobe />
   );
 }
 
@@ -1382,7 +1382,7 @@ function HeroFrame({
     <section
       data-melius-ui-id="workspace-hero"
       data-melius-ui-role="hero"
-      className={`${className} hero-panel overflow-hidden rounded-3xl p-6 text-white shadow-2xl shadow-indigo-950/16 sm:p-8`}
+      className={`${className} hero-panel overflow-hidden rounded-3xl p-6 text-white shadow-2xl shadow-slate-950/14 sm:p-8`}
     >
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl space-y-4">
@@ -1398,7 +1398,7 @@ function HeroFrame({
               type="button"
               data-melius-ui-id="hero-primary-action"
               data-melius-ui-role="button"
-              className="inline-flex min-h-10 items-center justify-center rounded-2xl bg-white px-4 py-2 text-sm font-black text-indigo-700 transition hover:bg-white/[0.90]"
+              className="inline-flex min-h-10 items-center justify-center rounded-2xl bg-white px-4 py-2 text-sm font-black text-slate-900 transition hover:bg-white/[0.90]"
             >
               {primary}
             </button>
@@ -1696,9 +1696,9 @@ function HomeContent({ copy, language }: { copy: AppCopy; language: Language }) 
                 </p>
                 <div className="mt-3 flex items-center justify-between gap-3 text-sm font-semibold text-zinc-500 dark:text-zinc-400">
                   <span className="flex items-center gap-2">
-                    <Heart className="h-4 w-4 text-red-500" aria-hidden="true" />
+                    <Heart className="h-4 w-4 text-rose-600 dark:text-rose-300" aria-hidden="true" />
                     {post.likes}
-                    <MessageSquare className="ml-2 h-4 w-4 text-blue-500" aria-hidden="true" />
+                    <MessageSquare className="ml-2 h-4 w-4 text-blue-700 dark:text-blue-300" aria-hidden="true" />
                     {post.comments}
                   </span>
                   <span>{post.time[language]}</span>
@@ -2109,11 +2109,11 @@ function App() {
                 <IconButton dataId="notifications-action" roleName="button" label={copy.notifications}>
                   <Bell className="h-5 w-5" aria-hidden="true" />
                 </IconButton>
-                <span className="absolute -right-0.5 -top-0.5 grid h-5 w-5 place-items-center rounded-full bg-red-500 text-[10px] font-black text-white">
+                <span className="absolute -right-0.5 -top-0.5 grid h-5 w-5 place-items-center rounded-full bg-rose-600 text-[10px] font-black text-white dark:bg-rose-500">
                   5
                 </span>
               </span>
-              <span data-melius-ui-id="header-avatar" data-melius-ui-role="avatar" className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-gradient-to-br from-indigo-600 to-sky-500 text-xs font-black text-white dark:border-white">
+              <span data-melius-ui-id="header-avatar" data-melius-ui-role="avatar" className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-zinc-950 bg-gradient-to-br from-slate-900 to-blue-800 text-xs font-black text-white dark:border-white">
                 JL
               </span>
             </div>
