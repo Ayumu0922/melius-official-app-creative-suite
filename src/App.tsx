@@ -78,6 +78,7 @@ type AppFilter = 'all' | 'creative' | 'video' | 'web' | '3d';
 type FileFilter = 'all' | 'recent' | 'shared' | 'favorites' | 'trash';
 type ProjectFilter = 'all' | 'recent' | 'shared' | 'archived';
 type LearnFilter = 'tutorials' | 'courses' | 'tips' | 'trending' | 'saved';
+type PanelPresentation = 'inspector' | 'modal';
 type Tone =
   | 'violet'
   | 'orange'
@@ -100,6 +101,7 @@ type InspectorPanel = {
   meta: Array<{ label: string; value: string }>;
   progress?: number;
   progressLabel?: string;
+  presentation?: PanelPresentation;
   primaryLabel: string;
   secondaryLabel: string;
 };
@@ -110,7 +112,7 @@ type NoticeState = {
   body?: string;
 };
 
-type OpenPanelHandler = (panel: InspectorPanel, noticeTitle?: string, noticeBody?: string) => void;
+type OpenPanelHandler = (panel: InspectorPanel, noticeTitle?: string, noticeBody?: string, presentation?: PanelPresentation) => void;
 type ShowNoticeHandler = (title: string, body?: string) => void;
 
 const TEMPLATE_ID = 'official-app-creative-suite';
@@ -932,6 +934,7 @@ function getAppPanel(app: (typeof apps)[number], copy: AppCopy, language: Langua
     ],
     progress: app.progress,
     progressLabel: copy.labels.installation,
+    presentation: 'modal',
     primaryLabel: app.progress === 100 ? copy.actions.open : copy.actions.continueInstall,
     secondaryLabel: localized(language, 'Manage access', '権限を管理'),
   };
@@ -953,6 +956,7 @@ function getFilePanel(file: (typeof recentFiles)[number], copy: AppCopy, languag
       { label: copy.labels.size, value: file.size },
       { label: copy.labels.sharedWith, value: file.shared ? `${file.collaborators} ${copy.labels.people}` : localized(language, 'Private', '非共有') },
     ],
+    presentation: 'modal',
     primaryLabel: copy.actions.open,
     secondaryLabel: localized(language, 'Share settings', '共有設定'),
   };
@@ -972,6 +976,7 @@ function getProjectPanel(project: (typeof projects)[number], copy: AppCopy, lang
     ],
     progress: project.progress,
     progressLabel: copy.labels.progress,
+    presentation: 'modal',
     primaryLabel: copy.actions.open,
     secondaryLabel: localized(language, 'Share brief', 'ブリーフ共有'),
   };
@@ -989,6 +994,7 @@ function getTutorialPanel(tutorial: (typeof tutorials)[number], copy: AppCopy, l
       { label: localized(language, 'Duration', '時間'), value: tutorial.duration },
       { label: localized(language, 'Level', 'レベル'), value: copy.labels[tutorial.level] },
     ],
+    presentation: 'modal',
     primaryLabel: copy.actions.watchNow,
     secondaryLabel: localized(language, 'Save course', 'コースを保存'),
   };
@@ -1006,6 +1012,7 @@ function getTemplatePanel(template: (typeof projectTemplates)[number], copy: App
       { label: localized(language, 'Recommended flow', '推奨フロー'), value: localized(language, 'Brief, assets, review, delivery', 'ブリーフ、素材、レビュー、納品') },
       { label: localized(language, 'Starter files', '初期ファイル'), value: '12' },
     ],
+    presentation: 'modal',
     primaryLabel: copy.actions.useTemplate,
     secondaryLabel: localized(language, 'Preview outline', '構成を確認'),
   };
@@ -2026,7 +2033,7 @@ function HomeContent({
         body={copy.heroes.home.body}
         primary={copy.heroes.home.primary}
         secondary={copy.heroes.home.secondary}
-        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.home.primary, localized(language, 'Plan coverage, storage usage, and production seats are ready for review.', 'プラン範囲、ストレージ利用、制作席数を確認できます。'), copy, language, Crown))}
+        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.home.primary, localized(language, 'Plan coverage, storage usage, and production seats are ready for review.', 'プラン範囲、ストレージ利用、制作席数を確認できます。'), copy, language, Crown), undefined, undefined, 'modal')}
         onSecondary={() => onOpenPanel(getUtilityPanel(copy.heroes.home.secondary, localized(language, 'Recent workspace activity has been filtered into a review queue.', '直近のワークスペース活動をレビューキューとして表示しました。'), copy, language, Clock))}
       />
 
@@ -2171,7 +2178,7 @@ function AppsContent({
         title={copy.heroes.apps.title}
         body={copy.heroes.apps.body}
         primary={copy.heroes.apps.primary}
-        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.apps.primary, localized(language, 'Desktop installation is queued with app access, update policy, and device scope.', 'デスクトップ版導入のため、アプリ権限、更新ポリシー、端末範囲を準備しました。'), copy, language, Download))}
+        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.apps.primary, localized(language, 'Desktop installation is queued with app access, update policy, and device scope.', 'デスクトップ版導入のため、アプリ権限、更新ポリシー、端末範囲を準備しました。'), copy, language, Download), undefined, undefined, 'modal')}
       />
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <FilterRail dataId="app-category-filters">
@@ -2313,7 +2320,7 @@ function FilesContent({
         body={copy.heroes.files.body}
         primary={copy.heroes.files.primary}
         secondary={copy.heroes.files.secondary}
-        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.files.primary, localized(language, 'Upload staging is ready with naming, sharing, and review defaults.', 'アップロード準備として、命名、共有、レビューの初期設定を用意しました。'), copy, language, Cloud))}
+        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.files.primary, localized(language, 'Upload staging is ready with naming, sharing, and review defaults.', 'アップロード準備として、命名、共有、レビューの初期設定を用意しました。'), copy, language, Cloud), undefined, undefined, 'modal')}
         onSecondary={() => onOpenPanel(getUtilityPanel(copy.heroes.files.secondary ?? copy.cloud, localized(language, 'Cloud storage usage, shared folders, and retention status are available here.', 'クラウド容量、共有フォルダ、保持状況を確認できます。'), copy, language, Cloud))}
       />
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
@@ -2372,7 +2379,7 @@ function FilesContent({
                 language={language}
                 onOpen={() => onOpenPanel(getFilePanel(file, copy, language), file.name)}
                 onShare={() => onOpenPanel(getFilePanel(file, copy, language), localized(language, 'Share settings opened', '共有設定を開きました'), file.name)}
-                onOptions={() => onOpenPanel(getUtilityPanel(file.name, localized(language, 'File actions include version history, rename, duplicate, and archive.', 'ファイル操作には履歴、名称変更、複製、アーカイブがあります。'), copy, language, MoreHorizontal), localized(language, 'File actions opened', 'ファイル操作を開きました'))}
+                onOptions={() => onOpenPanel(getUtilityPanel(file.name, localized(language, 'File actions include version history, rename, duplicate, and archive.', 'ファイル操作には履歴、名称変更、複製、アーカイブがあります。'), copy, language, MoreHorizontal), localized(language, 'File actions opened', 'ファイル操作を開きました'), undefined, 'modal')}
               />
             ))}
           </div>
@@ -2438,7 +2445,7 @@ function ProjectsContent({
         title={copy.heroes.projects.title}
         body={copy.heroes.projects.body}
         primary={copy.heroes.projects.primary}
-        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.projects.primary, localized(language, 'A new project workspace is staged with roles, dates, and default folders.', '新規プロジェクトの役割、日程、初期フォルダを準備しました。'), copy, language, Plus))}
+        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.projects.primary, localized(language, 'A new project workspace is staged with roles, dates, and default folders.', '新規プロジェクトの役割、日程、初期フォルダを準備しました。'), copy, language, Plus), undefined, undefined, 'modal')}
       />
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <FilterRail dataId="project-filters">
@@ -2483,7 +2490,7 @@ function ProjectsContent({
                 <h3 className="mt-4 text-lg font-black text-zinc-950 dark:text-white">{copy.actions.createProject}</h3>
                 <p className="mt-2 max-w-xs text-sm font-medium leading-5 text-zinc-500 dark:text-zinc-400">{copy.actions.startFromTemplate}</p>
                 <div className="mt-5">
-                  <PrimaryButton dataId="create-project-action" roleName="button" onClick={() => onOpenPanel(getUtilityPanel(copy.actions.createProject, localized(language, 'Project setup has roles, milestones, folders, and review checkpoints ready to configure.', 'プロジェクト設定として、役割、マイルストーン、フォルダ、レビュー地点を準備しました。'), copy, language, Plus), copy.actions.createProject)}>
+                  <PrimaryButton dataId="create-project-action" roleName="button" onClick={() => onOpenPanel(getUtilityPanel(copy.actions.createProject, localized(language, 'Project setup has roles, milestones, folders, and review checkpoints ready to configure.', 'プロジェクト設定として、役割、マイルストーン、フォルダ、レビュー地点を準備しました。'), copy, language, Plus), copy.actions.createProject, undefined, 'modal')}>
                     {copy.newProject}
                   </PrimaryButton>
                 </div>
@@ -2566,7 +2573,7 @@ function LearnContent({
         title={copy.heroes.learn.title}
         body={copy.heroes.learn.body}
         primary={copy.heroes.learn.primary}
-        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.learn.primary, localized(language, 'Seat upgrade planning now shows learners, paths, and completion coverage.', '席数アップグレードのため、学習者、パス、完了状況を表示しました。'), copy, language, Crown))}
+        onPrimary={() => onOpenPanel(getUtilityPanel(copy.heroes.learn.primary, localized(language, 'Seat upgrade planning now shows learners, paths, and completion coverage.', '席数アップグレードのため、学習者、パス、完了状況を表示しました。'), copy, language, Crown), undefined, undefined, 'modal')}
       />
       <FilterRail dataId="learn-filters">
         <FilterButton dataId="filter-tutorials-all" selected={learnFilter === 'tutorials'} onClick={() => setFilter('tutorials', copy.sections.featuredTutorials)} icon={Play}>{copy.sections.featuredTutorials}</FilterButton>
@@ -2699,6 +2706,7 @@ function LearnContent({
                         ],
                         progress: path.progress,
                         progressLabel: copy.labels.progress,
+                        presentation: 'modal',
                         primaryLabel: path.progress > 0 ? copy.actions.continueLearning : copy.actions.startLearning,
                         secondaryLabel: localized(language, 'Assign to team', 'チームに割り当て'),
                       },
@@ -2788,6 +2796,85 @@ function ActionInspector({
   );
 }
 
+function ActionModal({
+  panel,
+  onClose,
+  onPrimary,
+  onSecondary,
+}: {
+  panel: InspectorPanel;
+  onClose: () => void;
+  onPrimary: () => void;
+  onSecondary: () => void;
+}) {
+  const Icon = panel.icon ?? Settings;
+
+  return (
+    <div
+      data-melius-ui-id="workspace-action-modal-overlay"
+      data-melius-ui-role="overlay"
+      onClick={onClose}
+      className="fixed inset-0 z-50 grid place-items-center bg-zinc-950/40 p-3 backdrop-blur-sm sm:p-6"
+    >
+      <section
+        data-melius-ui-id="workspace-action-modal"
+        data-melius-ui-role="dialog"
+        onClick={(event) => event.stopPropagation()}
+        className="modal-enter thin-scrollbar max-h-[min(42rem,calc(100svh-2rem))] w-full max-w-2xl overflow-y-auto rounded-lg border border-zinc-950/[0.10] bg-white/[0.97] shadow-2xl shadow-zinc-950/25 backdrop-blur-xl dark:border-white/[0.12] dark:bg-zinc-950/[0.97]"
+      >
+        <div className="flex items-start justify-between gap-3 border-b border-zinc-950/[0.08] p-5 dark:border-white/[0.08]">
+          <div className="flex min-w-0 items-center gap-3">
+            <ToneIcon tone={panel.tone ?? 'blue'} icon={Icon} />
+            <div className="min-w-0">
+              <div className="text-xs font-black uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">{panel.eyebrow}</div>
+              <h2 className="mt-1 text-2xl font-black leading-tight text-zinc-950 dark:text-white">{panel.title}</h2>
+            </div>
+          </div>
+          <IconButton dataId="workspace-action-modal-close" roleName="button" label="Close" onClick={onClose}>
+            <X className="h-5 w-5" aria-hidden="true" />
+          </IconButton>
+        </div>
+
+        <div className="grid gap-5 p-5 lg:grid-cols-[minmax(0,1fr)_16rem]">
+          <div className="space-y-4">
+            <p data-melius-ui-id="workspace-action-modal-body" data-melius-ui-role="text" className="text-sm font-medium leading-6 text-zinc-600 dark:text-zinc-300">
+              {panel.body}
+            </p>
+
+            {typeof panel.progress === 'number' ? (
+              <div data-melius-ui-id="workspace-action-modal-progress-block" data-melius-ui-role="status" className="space-y-2">
+                <div className="flex items-center justify-between text-sm font-bold text-zinc-600 dark:text-zinc-300">
+                  <span>{panel.progressLabel ?? 'Progress'}</span>
+                  <span>{panel.progress}%</span>
+                </div>
+                <ProgressBar dataId="workspace-action-modal-progress" value={panel.progress} />
+              </div>
+            ) : null}
+
+            <div data-melius-ui-id="workspace-action-modal-actions" data-melius-ui-role="actions" className="flex flex-col gap-2 sm:flex-row">
+              <PrimaryButton dataId="workspace-action-modal-primary" roleName="button" onClick={onPrimary}>
+                {panel.primaryLabel}
+              </PrimaryButton>
+              <SecondaryButton dataId="workspace-action-modal-secondary" roleName="button" onClick={onSecondary}>
+                {panel.secondaryLabel}
+              </SecondaryButton>
+            </div>
+          </div>
+
+          <div data-melius-ui-id="workspace-action-modal-meta" data-melius-ui-role="list" className="divide-y divide-zinc-950/[0.08] overflow-hidden rounded-lg border border-zinc-950/[0.08] bg-zinc-950/[0.025] dark:divide-white/[0.08] dark:border-white/[0.10] dark:bg-white/[0.04]">
+            {panel.meta.map((item, index) => (
+              <div key={`${item.label}-${index}`} data-melius-ui-id={`workspace-action-modal-meta-${index + 1}`} data-melius-ui-role="list-item" className="px-3 py-3">
+                <div className="text-xs font-bold uppercase tracking-[0.10em] text-zinc-500 dark:text-zinc-400">{item.label}</div>
+                <div className="mt-1 text-base font-black text-zinc-950 dark:text-white">{item.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 function WorkspaceToast({ notice, raised, onDismiss }: { notice: NoticeState; raised: boolean; onDismiss: () => void }) {
   return (
     <div
@@ -2821,6 +2908,7 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
   const [inspectorPanel, setInspectorPanel] = useState<InspectorPanel | null>(null);
+  const [panelPresentation, setPanelPresentation] = useState<PanelPresentation>('inspector');
   const [notice, setNotice] = useState<NoticeState | null>(null);
   const [favoriteAppIds, setFavoriteAppIds] = useState<string[]>(initialFavoriteAppIds);
   const [favoriteFileIds] = useState<string[]>(initialFavoriteFileIds);
@@ -2872,13 +2960,22 @@ function App() {
     setNotice({ id: Date.now(), title, body });
   };
 
-  const openPanel: OpenPanelHandler = (panel, noticeTitle, noticeBody) => {
+  const openPanel: OpenPanelHandler = (panel, noticeTitle, noticeBody, presentation) => {
+    const nextPresentation = presentation ?? panel.presentation ?? 'inspector';
+
     setInspectorPanel(panel);
+    setPanelPresentation(nextPresentation);
+
+    if (nextPresentation === 'modal') {
+      setNotice(null);
+      return;
+    }
+
     showNotice(noticeTitle ?? panel.title, noticeBody ?? localized(language, 'Inspector updated.', 'インスペクターを更新しました。'));
   };
 
-  const openUtilityAction = (title: string, body: string, icon?: LucideIcon) => {
-    openPanel(getUtilityPanel(title, body, copy, language, icon), title);
+  const openUtilityAction = (title: string, body: string, icon?: LucideIcon, presentation?: PanelPresentation) => {
+    openPanel(getUtilityPanel(title, body, copy, language, icon), title, undefined, presentation);
   };
 
   const navigateTab = (tab: TabId) => {
@@ -3077,11 +3174,11 @@ function App() {
                 ))}
               </div>
               <div data-melius-ui-id="workspace-primary-actions" data-melius-ui-role="actions" className="hidden gap-2 lg:flex">
-                <SecondaryButton dataId="install-app-action" roleName="button" onClick={() => openUtilityAction(copy.install, localized(language, 'Installer queue is ready with device scope and update policy.', 'インストーラーキューに端末範囲と更新ポリシーを準備しました。'), Download)}>
+                <SecondaryButton dataId="install-app-action" roleName="button" onClick={() => openUtilityAction(copy.install, localized(language, 'Installer queue is ready with device scope and update policy.', 'インストーラーキューに端末範囲と更新ポリシーを準備しました。'), Download, 'modal')}>
                   <Download className="h-4 w-4" aria-hidden="true" />
                   {copy.install}
                 </SecondaryButton>
-                <PrimaryButton dataId="new-project-action" roleName="button" onClick={() => openUtilityAction(copy.newProject, localized(language, 'New project setup is ready with templates, folders, and milestones.', '新規プロジェクト作成のため、テンプレート、フォルダ、マイルストーンを準備しました。'), Plus)}>
+                <PrimaryButton dataId="new-project-action" roleName="button" onClick={() => openUtilityAction(copy.newProject, localized(language, 'New project setup is ready with templates, folders, and milestones.', '新規プロジェクト作成のため、テンプレート、フォルダ、マイルストーンを準備しました。'), Plus, 'modal')}>
                   <Plus className="h-4 w-4" aria-hidden="true" />
                   {copy.newProject}
                 </PrimaryButton>
@@ -3091,8 +3188,16 @@ function App() {
           </main>
         </div>
       </WorkspaceFrame>
-      {inspectorPanel ? (
+      {inspectorPanel && panelPresentation === 'inspector' ? (
         <ActionInspector
+          panel={inspectorPanel}
+          onClose={() => setInspectorPanel(null)}
+          onPrimary={() => showNotice(inspectorPanel.primaryLabel, inspectorPanel.title)}
+          onSecondary={() => showNotice(inspectorPanel.secondaryLabel, inspectorPanel.title)}
+        />
+      ) : null}
+      {inspectorPanel && panelPresentation === 'modal' ? (
+        <ActionModal
           panel={inspectorPanel}
           onClose={() => setInspectorPanel(null)}
           onPrimary={() => showNotice(inspectorPanel.primaryLabel, inspectorPanel.title)}
