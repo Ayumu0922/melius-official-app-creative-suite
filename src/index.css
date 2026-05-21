@@ -92,6 +92,30 @@ button:disabled {
   }
 }
 
+@keyframes inspectorEnter {
+  from {
+    opacity: 0;
+    transform: translateX(18px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes toastEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes globeRotate {
   from {
     transform: rotate(0deg);
@@ -133,6 +157,14 @@ button:disabled {
 
 .app-card-enter {
   animation: cardEnter 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.inspector-enter {
+  animation: inspectorEnter 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.toast-enter {
+  animation: toastEnter 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .orbit-globe {
